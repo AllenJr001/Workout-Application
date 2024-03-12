@@ -1,0 +1,362 @@
+@import "utility";
+@import "variables";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: inherit;
+  overflow: hidden;
+
+  body {
+    font-size: 62.5%;
+    background-color: $color_Mdark;
+    height: 100vh;
+    font-family: "roboto", sans-serif;
+  }
+
+  .head {
+    &-primary {
+      font-size: 3rem;
+    }
+    &-secondary {
+      font-size: 1.5rem;
+    }
+  }
+  .input {
+    &-workout {
+      width: 80%;
+      border-radius: 10px;
+      background-color: $color_L2dark;
+      border: none;
+      height: 2rem;
+      font-size: 1.25rem;
+      color: $txt-white;
+      transition: transform 0.2s;
+      &::placeholder {
+        color: $txt-white;
+        font-size: inherit;
+      }
+      &:hover {
+        background-color: $color_L3dark;
+      }
+      &:focus {
+        outline: none;
+        background-color: $color_L3dark;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .container {
+    height: 100%;
+  }
+  .grid {
+    display: flex;
+
+    gap: 1rem;
+
+    height: 80%;
+    &__col {
+      background-color: rgb(37, 37, 37);
+      border-radius: 1rem;
+      &-1 {
+        flex-basis: 50%;
+        border-right: solid 1rem $color_Ldark;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          background-color: $color_Mdark;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $color_L2dark;
+          border-radius: 5px;
+        }
+      }
+      &-2 {
+        overflow-y: scroll;
+        flex-basis: 60%;
+
+        &::-webkit-scrollbar {
+          background-color: $color_Mdark;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $color_L2dark;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .workout-card {
+    position: relative;
+    height: 30%;
+    width: 70%;
+    border-radius: 10px;
+    background-color: $color_L4dark;
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    transition: all 0.5s;
+    &__name {
+      color: $color_Mdark;
+      font-weight: 600;
+      font-size: 1.8rem;
+      position: absolute;
+      left: 50%;
+      top: 1rem;
+    }
+    &__btn {
+      border-radius: 10px;
+      border: none;
+      width: 100%;
+      height: 4.5rem;
+      transition: all 0.5s ease;
+      background-color: $color_Ldark;
+    }
+    &__btn-close {
+      &:hover {
+        background-color: #510000;
+      }
+    }
+    &__btn-info {
+      &:hover {
+        background-color: #482600;
+      }
+    }
+    &__btn-edit {
+      &-icon-edit {
+        height: 1.5rem;
+        
+        
+      }
+      &:hover {
+        background-color: #30004a;
+      }
+    }
+
+    &-extras {
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-weight: 600;
+
+      border-right: solid 0.5rem $color_Ldark;
+      padding-right: 3px;
+      transition: all .5s ease;
+      &:hover .workout-card__btn  {
+     
+     padding-right: 3rem;
+      
+      }
+
+      &__type {
+        color: #510000;
+        transition: all 0.2s ease-out;
+        &:hover {
+          background-color: $color_L3dark;
+          transform: scale(1.1);
+        }
+      }
+      &__muscle {
+        color: #30004a;
+        transition: all 0.2s ease-out;
+        &:hover {
+          background-color: $color_L3dark;
+          transform: scale(1.1);
+        }
+      }
+      &__equipment {
+        color: #482600;
+        transition: all 0.2s ease-out;
+        &:hover {
+          background-color: $color_L3dark;
+          transform: scale(1.1);
+        }
+      }
+      &__difficulty {
+        color: rgb(140, 138, 0);
+        transition: all 0.2s ease-out;
+        font-size: 1rem;
+        &:hover {
+          background-color: $color_L3dark;
+          transform: scale(1.1);
+        }
+      }
+    }
+    &-misc {
+      display: flex;
+      flex-basis: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 10%;
+      &__reps {
+      }
+    }
+  }
+  .form-workout {
+    &__button {
+      font-size: 1.2rem;
+      padding: 0 0.5rem;
+      border-radius: 5px;
+      background-color: $color_light;
+    }
+  }
+
+
+  .search-workout-card {
+    background-color: $color_light;
+    height: 10rem;
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s;
+    &__name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: $color_Mdark;
+    }
+    &__type,
+    &__muscle,
+    &__equipment {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    &__muscle {
+      color: #30004a;
+    }
+    &__type {
+      color: #510000;
+    }
+    &__equipment {
+      color: #482600;
+    }
+
+    &:hover {
+      padding-right: 5rem;
+    }
+    &:hover .search-workout-card__btn-add {
+      opacity: 100;
+      transform: translateX(0);
+    }
+    .search-workout-card__btn-add {
+      transition: all 0.5s;
+      font-size: 2rem;
+      padding: 0 0.5rem;
+      border-radius: 10px;
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: rgba(54, 192, 0, 0.599);
+      color: $txt-white;
+      cursor: pointer;
+      z-index: 2;
+
+      height: 100%;
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  .backdrop {
+    transition: all 0.5s;
+    filter: blur(10rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff5e;
+  }
+  .popup-container {
+    transition: all 0.5s;
+    width: 35%;
+    padding: 2rem;
+    background-color: aliceblue;
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-items: center;
+    border-radius: 10px;
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      &__input-reps,
+      &__input-sets,
+      &__btn {
+        border-radius: 10px;
+        border: none;
+        background-color: $color_Ldark;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.5rem;
+        color: $txt-white;
+        transition: all 0.5s;
+        &::placeholder {
+          color: $txt-white;
+          font-size: 1.5rem;
+        }
+        &:focus {
+          outline: none;
+          background-color: $color_L2dark;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+.search__card-container {
+  height: 100%;
+  width: 100%;
+}
+
+
+.info-container {
+  background-color: $color_L4dark;
+  height: 20rem;
+  width: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: none;
+  padding: 1rem 2rem;
+  transition: all .5s ease-in;
+  overflow-y: scroll;
+  z-index: 3;
+  &::-webkit-scrollbar {
+    background-color: $color_L2dark;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color_L3dark;
+    border-radius: 5px;
+  }
+  &__btn-leave {
+    
+    height: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  &-text {
+    font-size: 1.5rem;
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $color_Ldark;
+    }
+    &__description {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      
+    }
+  }
+}

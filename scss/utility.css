@@ -1,0 +1,36 @@
+.align {
+  text-align: center;
+}
+
+.txt-white {
+  color: #fff;
+}
+
+.margin-btm-large {
+  margin-bottom: 4rem;
+}
+
+.margin-btm-med {
+  margin-bottom: 2.5rem;
+}
+
+.margin-auto {
+  margin: 0 auto;
+  display: block;
+}
+
+.margin-top-small {
+  margin-top: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.hidden {
+  display: none;
+  z-index: -1;
+  opacity: 0;
+}/*# sourceMappingURL=utility.css.map */

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="head-primary align txt-white margin-btm-large">
+        Workout planner
+      </h1>
+      <div class="grid">
+        <div class="grid__col grid__col-1">
+          <h2 class="head-secondary txt-white align margin-btm-med">
+            Search workouts
+          </h2>
+          <div class="form-container">
+            <form class="form-workout" action="">
+              <input
+                placeholder="Search for workout..."
+                type="text"
+                class="input-workout margin-auto"
+              />
+            </form>
+            <div class="form-workout__container">
+              <button class="form-workout__button hidden">biceps</button>
+              <button class="form-workout__button hidden">triceps</button>
+              <button class="form-workout__button hidden">quadriceps</button>
+              <button class="form-workout__button hidden">abdominals</button>
+              <button class="form-workout__button hidden">adductors</button>
+              <button class="form-workout__button hidden">abductors</button>
+              <button class="form-workout__button hidden">calves</button>
+              <button class="form-workout__button hidden">chest</button>
+              <button class="form-workout__button hidden">forearms</button>
+              <button class="form-workout__button hidden">glutes</button>
+              <button class="form-workout__button hidden">hamstrings</button>
+              <button class="form-workout__button hidden">lower_back</button>
+              <button class="form-workout__button hidden">middle_back</button>
+              <button class="form-workout__button hidden">neck</button>
+              <button class="form-workout__button hidden">traps</button>
+            </div>
+            <button class="search-workout-card__btn-add hidden">
+              add workout
+            </button>
+          </div>
+          <div class="search__card-container">test</div>
+        </div>
+        <div class="grid__col grid__col-2">
+          <!-- <div class="workout-card margin-auto">
+            <div class="workout-card-extras">
+              <div class="workout-card__name">${name}</div>
+               <div class="workout-card-extras__type">${type}</div>
+              <div class="workout-card-extras__muscle">${muscle}</div>
+              <div class="workout-card-extras__equipment">${equipment}</div>
+              <div class="workout-card-extras__difficulty">${difficulty}</div> 
+              <button class="workout-card__btn workout-card__btn-close">
+                <img
+                  title="exit"
+                  class="workout-card__btn-close-icon-close"
+                  src="icon-close.png"
+                  alt=""
+                />
+              </button>
+              <button
+                title="info"
+                class="workout-card__btn workout-card__btn-info"
+              >
+                <img
+                  class="workout-card__btn-close-icon-info"
+                  src="icon-info.png"
+                  alt=""
+                />
+              </button>
+              <button
+                class="workout-card__btn workout-card__btn-edit"
+                title="edit"
+              >
+                <img
+                  class="workout-card__btn-edit-icon-edit"
+                  src="icon-edit.png"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="workout-card-misc">
+              <div class="workout-card-misc__reps">${inputReps.value} reps</div>
+              <div class="workout-card-misc__sets">${inputSets.value} sets</div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="backdrop hidden">&nbsp;</div>
+    <div class="popup-container align margin-auto hidden">
+      <form action="" class="popup-container__form">
+        <h2 class="head-secondary margin-btm-med">edit workout</h2>
+        <input
+          required
+          placeholder="Reps"
+          type="text"
+          class="popup-container__form__input-reps"
+        />
+        <input
+          required
+          placeholder="Sets"
+          type="text"
+          class="popup-container__form__input-sets"
+        />
+        <button class="popup-container__form__btn">Submit</button>
+      </form>
+    </div>
+
+    <!-- <div class="info-container">
+      <img
+                  title="exit"
+                  class="info-container__btn-leave"
+                  src="icon-close.png"
+                  alt=""
+                />
+      <p class="info-container-text info-container-text__title align">Title</p>
+      <p class="info-container-text workout-card-extras__muscle">
+        muscle group
+      </p>
+      <p class="info-container-text workout-card-extras__type">type</p>
+      <p class="info-container-text workout-card-extras__equipment">
+        equipment
+      </p>
+      <p class="info-container-text info-container-text__description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quasi
+        laboriosam, quam odit assumenda autem mollitia libero velit voluptas,
+        fugit expedita, optio vel alias eaque saepe voluptate dolorum error
+        officia?
+      </p>
+    </div> -->
+  </body>
+</html>
